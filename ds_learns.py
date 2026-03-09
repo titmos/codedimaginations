@@ -1,4 +1,4 @@
-Solution:
+#Solution:
 
 # Here is a short solution with a dict comprehension.
 # The lesson gives an example of how to do this with an explicit loop.

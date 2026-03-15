@@ -16,6 +16,21 @@ Here's a slightly more succinct solution using a conditional expression:
 
 print("Splitting", total_candies, "candy" if total_candies == 1 else "candies")
 
+
+
+#Try to identify the bug and fix it in the cell below:
+def has_lucky_number(nums):
+    """Return whether the given list of numbers is lucky. A lucky list contains
+    at least one number divisible by 7.
+    """
+    for num in nums:
+        if num % 7 == 0:
+            return True
+        else:
+            return False
+
+#fix
+
 def has_lucky_number(nums):
     """Return whether the given list of numbers is lucky. A lucky list contains
     at least one number divisible by 7.

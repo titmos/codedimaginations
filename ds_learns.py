@@ -15,3 +15,18 @@ else:
 Here's a slightly more succinct solution using a conditional expression:
 
 print("Splitting", total_candies, "candy" if total_candies == 1 else "candies")
+
+def has_lucky_number(nums):
+    """Return whether the given list of numbers is lucky. A lucky list contains
+    at least one number divisible by 7.
+    """
+    for num in nums:
+        if num % 7 == 0:
+            return True
+     #This will ensure We've exhausted the list without finding a lucky number
+    return False
+    # one-line version using a list comprehension with Python's any function
+    return any([num % 7 == 0 for num in nums])
+has_lucky_number([3,7,5,6,14])
+# Check your answer
+q1.check()

@@ -45,3 +45,32 @@ def has_lucky_number(nums):
 has_lucky_number([3,7,5,6,14])
 # Check your answer
 q1.check()
+
+#dictionary comprehension
+planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+planet_to_initial = {planet: planet[0] for planet in planets}
+planet_to_initial
+
+def word_search(doc_list, keyword):
+    """
+    Takes a list of documents (each document is a string) and a keyword. 
+    Returns list of the index values into the original list for all documents 
+    containing the keyword.
+
+    Example:
+    doc_list = ["The Learn Python Challenge Casino.", "They bought a car", "Casinoville"]
+    >>> word_search(doc_list, 'casino')
+    >>> [0]
+    """
+    y = []
+    for j, i in enumerate(doc_list):
+        listd = i.split()
+        processed = [listdn.rstrip(".,?").lower() for listdn in listd]
+        #listd = listd.rstrip(',.')
+        print(processed)
+        if keyword.lower() in processed:
+            y.append(j)
+    print(y)
+    # list to hold the indices of matching documents
+    return y
+    pass

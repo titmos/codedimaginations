@@ -74,3 +74,31 @@ def word_search(doc_list, keyword):
     # list to hold the indices of matching documents
     return y
     pass
+
+
+def word_search(doc_list, keyword):
+    """
+    Takes a list of documents (each document is a string) and a keyword. 
+    Returns list of the index values into the original list for all documents 
+    containing the keyword.
+
+    Example:
+    doc_list = ["The Learn Python Challenge Casino.", "They bought a car", "Casinoville"]
+    >>> word_search(doc_list, 'casino')
+    >>> [0]
+    """
+    y = []
+    for j, i in enumerate(doc_list):
+        listd = i.split()
+        processed = [listdn.rstrip(".,?").lower() for listdn in listd]
+        #listd = listd.rstrip(',.')
+        print ('Processed list ', processed)
+        if keyword.lower() in processed:
+            y.append(j)
+            print(keyword, ' found in ', i)
+    print(y)
+    # list to hold the indices of matching documents
+    return y
+    pass
+# Check your answer
+q2.check()
